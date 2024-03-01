@@ -277,3 +277,24 @@ ul.errorlist{
   font-style: italic;
   color: red;
 }
+
+.contenedorFormulario{
+  background-color: rgb(24, 64, 8);
+  width: 50%;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 1px 0;
+}
+
+.contenedorFormulario form{
+  text-align: center;
+}
+
+.contenedorFormulario input{
+  width: 150px;
+}
+
+.contenedorFormulario table{
+  color: #ffffff;
+  margin: 20px auto;
+}

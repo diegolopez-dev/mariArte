@@ -1,0 +1,18 @@
+{% extends "MariArteApp/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="contenedorFormulario">
+    {% if "valido" in request.GET %} 
+        <p>Email enviado</p>
+    {% endif %}
+    <form action="" method="POST" class="form">
+        {% csrf_token %}
+        <table>
+            {{ miFormulario.as_table }}
+        </table>
+        <input type="submit" value="Enviar"></input>
+    </form>
+</div>
+
+{% endblock %}
