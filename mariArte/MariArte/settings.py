@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'servicios',
     'tienda',
     'carro',
+    'autenticacion',
     'contacto',
 ]
 
