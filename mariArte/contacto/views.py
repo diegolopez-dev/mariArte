@@ -17,11 +17,11 @@ def contacto(request):
                                  f'Usuario {nombre} dirección {email} escribe:\n {contenido}',
                                  "", ["diego.teide@gmail.com"], reply_to={email})
             
-            try:
-                email.send()
-                return redirect("/contacto/?valido")
-            except:
-                return redirect("/contacto/?novalido")
+            # try:
+            #     email.send()
+            #     return redirect("contacto/?valido")
+            # except:
+            #     return redirect("contacto/?novalido")
         
     return render(request, "contacto/contacto.html", {
         'miFormulario': formulario_contacto
