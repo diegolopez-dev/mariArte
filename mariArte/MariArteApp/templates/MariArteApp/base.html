@@ -20,10 +20,17 @@
 <body>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      
-        <span class="site-heading-lower">Gestión de Pedidos</span>
-      </h1>
-
+      <span class="site-heading-lower">Gestión de Pedidos</span>
+    </h1>
+    <div style="text-align: right; margin-right: 100px; color: white;">
+      {% if user.is_authenticated %}
+        Hola, {{ user.username }} &nbsp;&nbsp; 
+        <a style="color: white;" href="{% url 'cerrar_sesion' %}">Cerrar sesión</a>
+      {% else %}
+        <a style="color: white;" href="{% url 'logear' %}">Login</a> &nbsp;&nbsp; 
+        <a style="color: white;" href="{% url 'Autenticacion' %}">Regí­strate</a>
+      {% endif %}
+    </div>
 
  <!-- Navbar -->
  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
