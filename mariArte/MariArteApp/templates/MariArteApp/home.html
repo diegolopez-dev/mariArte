@@ -1,19 +1,17 @@
 {% extends "MariArteApp/base.html" %}
 {% load static %}
 {% block content %}
-   <!-- Heading -->
-   <section class="page-section clearfix">
-    <div class="container">
-      <div class="intro">
-      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'MariArteApp/img/principal.jpg' %}" alt="">
-        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <h2 class="section-heading mb-4" >
-            <span class="section-heading-upper">Puntualidad</span>
-            <span class="section-heading-lower">El mejor stock</span>
-          </h2>
-          <p class="mb-3">En la puerta de tu casa en menos de 48 h con el envío normal. En menos de 24 h con el envío express.
-          </p>
-        </div>
+
+   <!-- Slider -->
+   <section class="page-section">
+    <div class="container-slider container">
+      <div class="slider-frame">
+        <ul>
+            <li><img src="{% static 'MariArteApp/img/slider1.jpg' %}" alt=""></li>
+            <li><img src="{% static 'MariArteApp/img/slider2.jpg' %}" alt=""></li>
+            <li><img src="{% static 'MariArteApp/img/slider3.jpg' %}" alt=""></li>
+            <li><img src="{% static 'MariArteApp/img/slider4.jpg' %}" alt=""></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -22,16 +20,21 @@
     <section class="page-section cta">
       <div class="container">
         <div class="row">
-          <div class="col-xl-9 mx-auto">
+          <div class="mx-auto">
             <div class="cta-inner text-center rounded">
-              <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">Compromiso total</span>
-                <span class="section-heading-lower">Garantizado</span>
+              <h2 class="section-heading mb-3">
+                <span class="section-heading-upper">Descubre la elegancia artesanal de MariArte</span>
+                <span class="section-heading-lower">Botellas únicas para momentos especiales</span>
               </h2>
-              <p class="mb-0">Con más de 75 años de experiencia a nuestras espaldas, desde Gestión de Pedidos tenemos los conocimientos y herramientas necesarios para llevar cualquier objeto a la puerta de su casa con puntualidad y profesionalidad.</p>
+              <p class="mb-1">"¡Bienvenido a nuestra tienda online de botellas artesanales! Descubre una exquisita selección de botellas únicas, creadas conpasión y dedicación por artesanos expertos. 
+                Cada botella cuenta con un diseño exclusivo y detalles meticulosos que las hacen  
+                verdaderas obras de arte. Ya sea para regalar o disfrutar en casa, nuestras botellas artesanales añadirán un toque de         
+                elegancia y originalidad a cualquier ocasión. Explora nuestra colección y elige la botella perfecta para ti. ¡Haz de cada     
+                momento algo especial con nuestras botellas artesanales!"</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+    
 {% endblock %}

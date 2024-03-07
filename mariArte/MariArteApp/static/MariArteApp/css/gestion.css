@@ -1,51 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*   VARIABLES   */
+:root {
+  --font-family: "Poppins", sans-serf;
+  --bold-font: 700;
+  --bg-color: #faffbe; 
+  --secondary-bg-color: #0a1a08;
+  --font-color: #141212;
+  --font-color-active: #000000;
+  --secondary-font-color: #e5e518;
+  --bottom-margin: 0.5rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+a:hover {
+  color: var(--font-color);
+}
+
 body {
-  font-family: 'Lora';
-  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg_main.jpg");
+  font-family: var(--font-family);
+  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("https://www.aldi.es/content/dam/aldi/spain/inspiracion/alditrucos/2022/aprende-decorar-botellas-cristal-navidad/decorar-botellas-vidrio-navidad_cover_video.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Raleway';
+/*  ---BASE---  */
+.site-heading {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-p {
-  line-height: 1.75;
+.site-heading-lower {
+  font-size: 4rem;
+  font-weight: var(--bold-font);
+  color: var(--bg-color);
+}
+
+/*  Navbar  */
+#mainNav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--bg-color);
+}
+
+.navbar-brand {
+  color: var(--secondary-font-color);
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: var(--font-color);
+  font-weight: var(--bold-font);
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  color: var(--font-color-active);
+  text-decoration: underline;
+}
+
+.nav-link:hover {
+  color: var(--font-color);
+}
+
+.btn {
+  color: var(--font-color);
+  background: var(--bg-color);
+  font-weight: var(--bold-font);
+  padding: 0;
+}
+
+.btn a:hover {
+  color: var(--bg-color);
+  background: var(--font-color);
 }
 
 .text-faded {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.site-heading {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  text-transform: uppercase;
-  line-height: 1;
-  font-family: 'Raleway';
-}
-
-.site-heading .site-heading-upper {
-  display: block;
-  font-size: 2rem;
-  font-weight: 800;
-}
-
-.site-heading .site-heading-lower {
-  font-size: 5rem;
-  font-weight: 100;
-  line-height: 4rem;
-}
+/*   ---'HOME'---  */
 
 .page-section {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*  Slider  */
+.container-slider {
+  padding: .5rem;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.slider-frame {
+  width: 100%;
+  height: 480px;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.slider-frame ul {
+  display: flex;
+  width: 400%;
+  animation: slide 20s infinite cubic-bezier(0.55, 0.48, 0.37, 0.92);
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+/*   Section   */
+.cta {
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
+
+.row {
+  margin: -.5rem;
+  padding: -1rem;
+}
+
+.cta-inner {
+  position: relative;
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
 
 .section-heading {
@@ -54,17 +173,24 @@ p {
 
 .section-heading .section-heading-upper {
   display: block;
-  font-size: 1rem;
-  font-weight: 800;
-  padding-bottom:.5rem;
-
+  font-size: 2rem;
+  padding-bottom: .5rem;
 }
 
 .section-heading .section-heading-lower {
   display: block;
-  font-size: 3rem;
-  font-weight: 100;
+  font-size: 1.5rem;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 .section-heading .section-heading-under {
@@ -77,25 +203,6 @@ p {
 
 .bg-faded {
   background-color: rgba(255, 255, 255, 0.85);
-}
-
-#mainNav {
-  background-color: rgba(24, 64, 8);
-  font-family: 'Raleway';
-}
-
-#mainNav .navbar-brand {
-  color: #ffffff;
-}
-
-#mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 800;
-}
-
-#mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #ffffff;
-  text-decoration: underline;
 }
 
 @media (min-width: 992px) {
@@ -152,20 +259,6 @@ p {
   }
 }
 
-.cta {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: rgb(242, 245, 240);
-}
-
-.cta .cta-inner {
-  position: relative;
-  padding: 3rem;
-  margin: 0.5rem;
-  background-color: rgba(24, 64, 8);
-  color: cornsilk;
-}
-
 .cta .cta-inner:before {
   border-radius: 0.5rem;
   content: '';
@@ -174,7 +267,7 @@ p {
   bottom: -0.5rem;
   left: -0.5rem;
   right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+  border: 0.25rem solid var(--font-color);
 }
 
 .cta .cta-innerv {
@@ -215,8 +308,6 @@ p {
   }
 }
 
-
-
 @media (min-width: 992px) {
   .list-hours {
     width: 50%;
@@ -229,16 +320,12 @@ p {
 }
 
 .footer {
-   background-color: rgba(24, 64, 8, 0.8);
+   background-color: var(--bg-color);
 }
-
-
 
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
 }
-
-
 
 .font-weight-light {
   font-weight: 100 !important;
@@ -253,7 +340,8 @@ p {
 }
 
 .mbt1{
-  padding-top: 1.25rem;
+  color: var(--font-color);
+  font-size: 1.2rem;
 }
 
 a.link{
