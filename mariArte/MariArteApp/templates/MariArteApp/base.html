@@ -37,32 +37,32 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item {% if request.path == '/' %} active {% endif %} px-lg-4">
-                <a class="nav-link text-center text-expanded" href="{% url 'Home' %}">Inicio</a>
+                <a class="nav-link text-center" href="{% url 'Home' %}">Inicio</a>
               </li>
               <li class="nav-item {% if request.path == '/servicios/' %} active {% endif %} px-lg-4">
-                <a class="nav-link text-center text-expanded" href="{% url 'Servicio' %}">Servicios</a>
+                <a class="nav-link text-center" href="{% url 'Servicio' %}">Servicios</a>
               </li>
               <li class="nav-item {% if request.path == '/tienda/' %} active {% endif %} px-lg-4">
-                <a class="nav-link text-center text-expanded" href="{% url 'Tienda' %}">Tienda</a>
+                <a class="nav-link text-center" href="{% url 'Tienda' %}">Tienda</a>
               </li>
               <li class="nav-item {% if request.path == '/contacto/' %} active {% endif %} px-lg-4">
-                <a class="nav-link text-center text-expanded" href="{% url 'Contacto' %}">Contacto</a>
+                <a class="nav-link text-center" href="{% url 'Contacto' %}">Contacto</a>
               </li>
             </ul>
             <form class="text-center text-expanded">
                 {% if user.is_authenticated %}
-                <button class="btn btn-sm" type="button">
-            	    <a class="nav-link text-center text-expanded" href="{% url 'cerrar_sesion' %}">Hola, {{ user.username }}</a>
+                <button id="btn-user" class="btn btn-sm" type="button">
+            	    <a id="link-btn-user" class="nav-link text-center" href="{% url 'cerrar_sesion' %}">Hola, {{ user.username }}</a>
                 </button>
                 <button class="btn btn-sm nav-item {% if request.path == '/cerrar_sesion/' %} active {% endif %}" type="button">
-                    <a class="nav-link text-center text-expanded" href="{% url 'cerrar_sesion' %}">Cerrar sesión</a>
+                    <a class="nav-link text-center" href="{% url 'cerrar_sesion' %}">Cerrar sesión</a>
                 </button>
                 {% else %}
                 <button class="btn btn-sm nav-item {% if request.path == '/autenticacion/logear' %} active {% endif %}" type="button">
-                    <a class="nav-link text-center text-expanded" href="{% url 'logear' %}">Login</a>
+                    <a class="nav-link text-center" href="{% url 'logear' %}">Login</a>
                 </button>
                 <button class="btn btn-sm nav-item {% if request.path == '/autenticacion/' %} active {% endif %}" type="button">
-                    <a class="nav-link text-center text-expanded" href="{% url 'Autenticacion' %}">Regí­strate</a>
+                    <a class="nav-link text-center" href="{% url 'Autenticacion' %}">Regí­strate</a>
                 </button>
                 {% endif %}
             </form>
@@ -75,8 +75,9 @@
   	{% endblock %}
 
   	<!-- Footer -->
-  	<footer class="footer text-center py-3">
+  	<footer class="footer text-center py-2">
     <div class="container">
+      <p>Creado con 💗 by <a target="_blank" href="https://github.com/diegolopez-dev">Diego López</a></p>
       <p class="m-0 mbt1">&copy; MariArte 2024</p>
     </div>
 	  </footer>

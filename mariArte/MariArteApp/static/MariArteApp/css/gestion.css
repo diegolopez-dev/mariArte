@@ -46,7 +46,7 @@ body {
   background-size: cover;
 }
 
-/*  ---BASE---  */
+/*  ---'BASE'---  */
 .site-heading {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -68,7 +68,12 @@ body {
 }
 
 .navbar-brand {
-  color: var(--secondary-font-color);
+  color: var(--font-color) !important;
+}
+
+.navbar-toggler {
+  color: var(--bg-color) !important;
+  background-color: var(--font-color) !important;
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -81,8 +86,9 @@ body {
   text-decoration: underline;
 }
 
-.nav-link:hover {
+.navbar-collapse .navbar-nav .nav-item a:hover {
   color: var(--font-color);
+  transform: scale(1.1);
 }
 
 .btn {
@@ -90,11 +96,24 @@ body {
   background: var(--bg-color);
   font-weight: var(--bold-font);
   padding: 0;
+  margin: 0 .5rem;
+  border: 1px solid var(--font-color);
 }
 
 .btn a:hover {
   color: var(--bg-color);
   background: var(--font-color);
+  transform: scale(1.1);
+}
+
+#btn-user {
+  color: var(--font-color) !important;
+  font-weight: var(--bold-font) !important;
+  all: unset;
+}
+
+#link-btn-user {
+  all: unset;
 }
 
 .text-faded {
@@ -109,6 +128,11 @@ body {
   margin-bottom: 1rem;
 }
 
+.slider {
+  margin-top: .5rem;
+  margin-bottom: -4rem;
+}
+
 /*  Slider  */
 .container-slider {
   padding: .5rem;
@@ -119,7 +143,6 @@ body {
 
 .slider-frame {
   width: 100%;
-  height: 480px;
   max-width: 1200px;
   overflow: hidden;
 }
@@ -132,6 +155,8 @@ body {
 
 .slider-frame img {
 	width: 100%;
+  height: 85%;
+  border-radius: 1%;
 }
 
 @keyframes slide {
@@ -162,7 +187,7 @@ body {
 .cta-inner {
   position: relative;
   padding: 1rem;
-  margin: 0.5rem;
+  margin: 2.5rem .5rem;
   background-color: var(--bg-color);
   color: var(--font-color);
 }
@@ -210,11 +235,13 @@ body {
     font-size: 0.9rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: rgba(255, 255, 255, 0.4);
-    text-decoration: underline;
+    color: var(--font-color);
+    transform: scale(1.1);
+    text-decoration: none;
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #ffffff;
+    color: var(--font-color-active);
+    transform: scale(1.2);
     text-decoration: underline;
   }
 }
@@ -350,7 +377,8 @@ a.link{
 
 a.link:hover{
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+  color: var(--font-color-active);
 }
 
 .section-content{
