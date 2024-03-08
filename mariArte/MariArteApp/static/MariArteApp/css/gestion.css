@@ -47,15 +47,15 @@ body {
 }
 
 /*  ---'BASE'---  */
-.site-heading {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.site-heading-lower {
+  font-size: 2rem;
+  font-weight: var(--bold-font);
+  color: var(--font-color);
 }
 
-.site-heading-lower {
-  font-size: 4rem;
-  font-weight: var(--bold-font);
-  color: var(--bg-color);
+.site-heading-lower:hover {
+  text-decoration: none;
+  transform: scale(1.2);
 }
 
 /*  Navbar  */
@@ -116,8 +116,20 @@ body {
   all: unset;
 }
 
-.text-faded {
-  color: rgba(255, 255, 255, 0.3);
+@media (min-width: 992px) {
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 0.9rem;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: var(--font-color);
+    transform: scale(1.1);
+    text-decoration: none;
+  }
+  #mainNav .navbar-nav .nav-item.active .nav-link:hover {
+    color: var(--font-color-active);
+    transform: scale(1.2);
+    text-decoration: underline;
+  }
 }
 
 /*   ---'HOME'---  */
@@ -192,6 +204,17 @@ body {
   color: var(--font-color);
 }
 
+.cta .cta-inner:before {
+  border-radius: 0.5rem;
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  bottom: -0.5rem;
+  left: -0.5rem;
+  right: -0.5rem;
+  border: 0.25rem solid var(--font-color);
+}
+
 .section-heading {
   text-transform: uppercase;
 }
@@ -207,6 +230,39 @@ body {
   font-size: 1.5rem;
 }
 
+/*   ---'SERVICIOS'---   */
+.intro {
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .intro .intro-img {
+    width: 75%;
+    float: left;
+  }
+
+  .intro .intro-text {
+    left: 600px;
+    width: 50%;
+    margin-top: 5rem;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    position: absolute;
+  }
+
+  .intro .intro-text .intro-button {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: -2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro .intro-text {
+    width: 45%;
+  }
+} 
 
 
 
@@ -216,7 +272,9 @@ body {
 
 
 
-
+.text-faded {
+  color: rgba(255, 255, 255, 0.3);
+}
 
 .section-heading .section-heading-under {
   display: block;
@@ -230,22 +288,6 @@ body {
   background-color: rgba(255, 255, 255, 0.85);
 }
 
-@media (min-width: 992px) {
-  #mainNav .navbar-nav .nav-item .nav-link {
-    font-size: 0.9rem;
-  }
-  #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: var(--font-color);
-    transform: scale(1.1);
-    text-decoration: none;
-  }
-  #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: var(--font-color-active);
-    transform: scale(1.2);
-    text-decoration: underline;
-  }
-}
-
 .btn-xl {
   font-weight: 700;
   font-size: 0.8rem;
@@ -253,48 +295,6 @@ body {
   padding-bottom: 1.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.intro {
-  position: relative;
-}
-
-@media (min-width: 992px) {
-  .intro .intro-img {
-    width: 75%;
-    float: left;
-  }
-  .intro .intro-text {
-    left: 600;
-    width: 60%;
-    margin-top: 3rem;
-    background-color: rgba(24, 64, 8);
-    color: cornsilk;
-    position: absolute;
-  }
-  .intro .intro-text .intro-button {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    bottom: -2rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .intro .intro-text {
-    width: 45%;
-  }
-}
-
-.cta .cta-inner:before {
-  border-radius: 0.5rem;
-  content: '';
-  position: absolute;
-  top: -0.5rem;
-  bottom: -0.5rem;
-  left: -0.5rem;
-  right: -0.5rem;
-  border: 0.25rem solid var(--font-color);
 }
 
 .cta .cta-innerv {
@@ -346,10 +346,6 @@ body {
   font-size: 1.2rem;
 }
 
-.footer {
-   background-color: var(--bg-color);
-}
-
 .btn {
   box-shadow: 0px 3px 3px 0px rgba(33, 37, 41, 0.1);
 }
@@ -394,7 +390,10 @@ ul.errorlist{
   color: red;
 }
 
-.contenedorFormulario{
+
+/*   ---CONTACTO---   */
+
+.contenedorFormulario {
   background-color: rgb(24, 64, 8);
   width: 50%;
   margin: 10px auto;
@@ -402,15 +401,20 @@ ul.errorlist{
   padding: 1px 0;
 }
 
-.contenedorFormulario form{
+.contenedorFormulario form {
   text-align: center;
 }
 
-.contenedorFormulario input{
+.contenedorFormulario input {
   width: 150px;
 }
 
-.contenedorFormulario table{
+.contenedorFormulario table {
   color: #ffffff;
   margin: 20px auto;
+}
+
+/*   ---FOOTER---   */
+.footer {
+  background-color: var(--bg-color);
 }

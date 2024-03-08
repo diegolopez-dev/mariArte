@@ -7,12 +7,13 @@
         <div class="container">
           <div class="intro">
           <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ servicio.imagen.url }}" alt="">
-            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-              <h2 class="section-heading mb-4" >
-                <span class="section-heading-lower">{{ servicio.titulo }}</span>
-                <span class="section-heading-upper">{{ servicio.contenido }}</span>
+            <div class="intro-text left-0 text-center bg-faded p-3 rounded">
+              <h2 class="section-heading mb-1" >
+                <span id="title" class="section-heading-upper">{{ servicio.titulo }}</span>
+                <span id="subtitle" class="section-heading-lower">{{ servicio.contenido }}</span>
               </h2>
-              <p class="mb-3">En la puerta de tu casa en menos de 48 h con el envío normal. En menos de 24 h con el envío express.
+              <p class="mb-1">
+                  {{ servicio.descripcion }}
               </p>
             </div>
           </div>
