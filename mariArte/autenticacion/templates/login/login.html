@@ -3,22 +3,23 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<form method="post" action="" style="color: white;">
-    {% csrf_token %}
-    <div style="width: 75%; margin: auto;">
-        </br>
-        {% if messages %}
-            {% for mensaje in messages %}
-            <span class="alert alert-{{mensaje.tags}}">
-                {{mensaje}}
-            </span>
-            {% endfor %}
-        {% endif %}
-        </br></br>
-        {{form|crispy}}
-        <button type="submit" class="btn btn-success">Login</button>
+<section class="contact" id="login">
+    <div class="contact-container">
+        <div class="form">
+            {% if messages %}
+                {% for mensaje in messages %}
+                <span class="alert-login">
+                    {{mensaje}}
+                </span>
+                {% endfor %}
+            {% endif %}
+            <form method="post" action="" id="form">
+                {% csrf_token %}
+                {{form|crispy}}
+                <input type="submit" value="Login" id="submit-btn" class="submit-btn"/>
+            </form>
+        </div>
     </div>
-    </br></br></br>
-</form>
+</section>
 
 {% endblock %}

@@ -44,6 +44,9 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  position: relative;
+  padding-bottom: 5.5rem;
+  min-height: 100vh;
 }
 
 /*  ---'BASE'---  */
@@ -264,6 +267,110 @@ body {
   }
 } 
 
+/*   ---LOGIN---   */
+
+#login {
+  margin-top: 5rem;
+}
+
+.alert-login {
+  color: var(--font-color);
+  text-align: center;
+}
+
+/*   ---REGISTRO---   */
+ 
+#registro {
+  margin: 2rem 1rem;
+}
+
+.invalid-feedback {
+  color: #ff0000 ;
+}
+
+/*   ---CONTACTO---   */
+
+.contact {
+  color: var(--font-color);
+  margin: 1rem 1rem;
+}
+
+.contact-title {
+  color: var(--bg-color);
+  text-align: center;
+  margin-bottom: var(--bottom-margin);
+  font-weight: var(--bold-font);
+  font-size: 2.5rem;
+}
+
+.contact-container {
+  background-color: var(--bg-color);
+  max-width: 40rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px var(--font-color);
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container label {
+  margin-top: .5rem;
+  line-height: 2rem;
+  font-weight: var(--bold-font);
+  color: var(--font-color);
+}
+
+.contact-container input {
+  padding: .5rem;
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+  border-radius: 5px;
+}
+
+.contact-container textarea {
+  min-height: 3.5rem;
+  padding: .5rem;
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+  border-radius: 5px;
+}
+
+#submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  color: var(--bg-color);
+  background-color: var(--font-color);
+  border: 2px solid var(--bg-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+}
+
+#submit-btn:hover {
+  color: var(--font-color);
+  background-color: var(--secondary-font-color);
+  border: 2px solid var(--font-color);
+  cursor: pointer;
+}
+
+/*   ---FOOTER---   */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+}
+
+
+
+
+
 
 
 
@@ -388,77 +495,4 @@ ul.errorlist{
   padding-top: .75rem;
   font-style: italic;
   color: red;
-}
-
-
-/*   ---CONTACTO---   */
-
-.contact {
-  color: var(--font-color);
-  margin: 1rem 1rem;
-}
-
-.contact-title {
-  color: var(--bg-color);
-  text-align: center;
-  margin-bottom: var(--bottom-margin);
-  font-weight: var(--bold-font);
-  font-size: 2.5rem;
-}
-
-.contact-container {
-  background-color: var(--bg-color);
-  max-width: 40rem;
-  margin: 1rem auto;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px var(--font-color);
-}
-
-#form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-container label {
-  margin-top: .5rem;
-  line-height: 2rem;
-  font-weight: var(--bold-font);
-  color: var(--font-color);
-}
-
-.contact-container input {
-  padding: .5rem;
-  color: var(--font-color);
-}
-
-.contact-container textarea {
-  min-height: 3.5rem;
-  padding: .5rem;
-  color: var(--font-color);
-}
-
-#submit-btn {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  color: var(--bg-color);
-  background-color: var(--font-color);
-  border: 2px solid var(--bg-color);
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: var(--bold-font);
-  transition: var(--transition);
-}
-
-#submit-btn:hover {
-  color: var(--font-color);
-  background-color: var(--secondary-font-color);
-  border: 2px solid var(--font-color);
-  cursor: pointer;
-}
-
-/*   ---FOOTER---   */
-.footer {
-  background-color: var(--bg-color);
 }
