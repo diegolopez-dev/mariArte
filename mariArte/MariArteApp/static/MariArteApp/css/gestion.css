@@ -8,7 +8,7 @@
   --secondary-bg-color: #0a1a08;
   --font-color: #141212;
   --font-color-active: #000000;
-  --secondary-font-color: #e5e518;
+  --secondary-font-color: #d1e092;
   --bottom-margin: 0.5rem;
   --line-height: 1.7rem;
   --transition: 0.3s;
@@ -393,25 +393,69 @@ ul.errorlist{
 
 /*   ---CONTACTO---   */
 
-.contenedorFormulario {
-  background-color: rgb(24, 64, 8);
-  width: 50%;
-  margin: 10px auto;
-  border-radius: 5px;
-  padding: 1px 0;
+.contact {
+  color: var(--font-color);
+  margin: 1rem 1rem;
 }
 
-.contenedorFormulario form {
+.contact-title {
+  color: var(--bg-color);
   text-align: center;
+  margin-bottom: var(--bottom-margin);
+  font-weight: var(--bold-font);
+  font-size: 2.5rem;
 }
 
-.contenedorFormulario input {
-  width: 150px;
+.contact-container {
+  background-color: var(--bg-color);
+  max-width: 40rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px var(--font-color);
 }
 
-.contenedorFormulario table {
-  color: #ffffff;
-  margin: 20px auto;
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container label {
+  margin-top: .5rem;
+  line-height: 2rem;
+  font-weight: var(--bold-font);
+  color: var(--font-color);
+}
+
+.contact-container input {
+  padding: .5rem;
+  color: var(--font-color);
+}
+
+.contact-container textarea {
+  min-height: 3.5rem;
+  padding: .5rem;
+  color: var(--font-color);
+}
+
+#submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  color: var(--bg-color);
+  background-color: var(--font-color);
+  border: 2px solid var(--bg-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+}
+
+#submit-btn:hover {
+  color: var(--font-color);
+  background-color: var(--secondary-font-color);
+  border: 2px solid var(--font-color);
+  cursor: pointer;
 }
 
 /*   ---FOOTER---   */
