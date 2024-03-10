@@ -119,6 +119,10 @@ body {
   all: unset;
 }
 
+.carro:hover {
+  transform: scale(1.1);
+}
+
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 0.9rem;
@@ -271,6 +275,7 @@ body {
 
 #login {
   margin-top: 5rem;
+  opacity: .9;
 }
 
 .alert-login {
@@ -282,10 +287,11 @@ body {
  
 #registro {
   margin: 2rem 1rem;
+  opacity: .9;
 }
 
 .invalid-feedback {
-  color: #ff0000 ;
+  color: #ff0000;
 }
 
 /*   ---CONTACTO---   */
@@ -310,6 +316,7 @@ body {
   padding: 1rem;
   border-radius: 5px;
   box-shadow: 0 2px 4px var(--font-color);
+  opacity: .9;
 }
 
 #form {
@@ -358,6 +365,9 @@ body {
   border: 2px solid var(--font-color);
   cursor: pointer;
 }
+
+/*   ---CARRO---   */
+
 
 /*   ---FOOTER---   */
 .footer {

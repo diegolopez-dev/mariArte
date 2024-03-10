@@ -3,13 +3,6 @@
 {% block content %}
 
 <div class="container">
-    <div style="float: right;">
-        {% if request.user.is_authenticated %}
-            {% include "carro/widget.html" %}
-        {% else %}
-            <div class="alert alert-danger text-center">Login para ver el carro</div>
-        {% endif %}
-    </div>
     <div class="row">
         {% for producto in productos %}
         <div class="col-md-3">

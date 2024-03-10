@@ -1,0 +1,13 @@
+{% extends "MariArteApp/base.html" %}
+{% load static %}
+{% block content %}
+
+    <div>
+        {% if request.user.is_authenticated %}
+            {% include "carro/widget.html" %}
+        {% else %}
+            <div>Login para ver el carro</div>
+        {% endif %}
+    </div>
+
+{% endblock %}

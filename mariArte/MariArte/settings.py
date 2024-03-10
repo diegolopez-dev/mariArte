@@ -147,4 +147,3 @@ MESSAGE_TAGS={
     mensajes_error.WARNING: 'warning',
     mensajes_error.ERROR: 'danger',
 }
-
