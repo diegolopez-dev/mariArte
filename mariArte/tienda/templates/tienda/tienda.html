@@ -13,12 +13,13 @@
                     <h7>{{producto.nombre}}</h7>
                     <p>{{producto.precio}} €</p>
                     <button class="btn btn-sm nav-item" type="button">
-                        <a class="nav-link text-center" href="{% url 'carro:agregar' producto.id %}">Agregar al carro</a>
+                        <a class="nav-link text-center" href="{% if request.user.is_authenticated %} {% url 'carro:agregar' producto.id %} {% else %} {% url 'TiendaCarro' %} {% endif %}">Agregar al carro</a>
                     </button>
                 </div>
             </div>
         </div>
         {% endfor %}
+
     </div>
 </section>
 

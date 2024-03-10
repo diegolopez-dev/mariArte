@@ -20,9 +20,9 @@
  <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-2" id="mainNav">
         <div class="container">
-          <a class="navbar-brand text-expanded font-weight-bold d-lg-none" href="{% url 'Home' %}">MariArte</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <a id="title-collapse" class="navbar-brand text-expanded font-weight-bold d-lg-none" href="{% url 'Home' %}">MariArte</a>
+          <button id="btn-collapse" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span id="icon-collapse" class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <h1 class="site-heading text-center d-none d-lg-block">
@@ -45,7 +45,7 @@
             <form class="text-center text-expanded">
                 {% if user.is_authenticated %}
                 <button id="btn-user" class="btn btn-sm" type="button">
-            	    <a id="link-btn-user" class="nav-link text-center" href="{% url 'cerrar_sesion' %}">Hola, {{ user.username }}</a>
+            	    <span class="text-center" href="{% url 'cerrar_sesion' %}">Hola, {{ user.username }}</span>
                 </button>
                 <button class="btn btn-sm nav-item {% if request.path == '/cerrar_sesion/' %} active {% endif %}" type="button">
                     <a class="nav-link text-center" href="{% url 'cerrar_sesion' %}">Cerrar sesión</a>

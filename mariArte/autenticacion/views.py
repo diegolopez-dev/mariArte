@@ -16,7 +16,7 @@ class Registro(View):
         if form.is_valid():
             usuario = form.save()
             login(request, usuario)
-            return redirect('Home')
+            return redirect('Tienda')
         else:
             for msg in form.error_messages:
                 messages.error(request, form.error_messages[msg])
@@ -31,7 +31,7 @@ def logear(request):
             usuario = authenticate(username = nombre_usuario, password = contraseña)
             if usuario is not None:
                 login(request, usuario)
-                return redirect('Home')
+                return redirect('Tienda')
             else:
                 messages.error(request, "Usuario o contraseña no validos.")
         else:

@@ -5,6 +5,7 @@
                 Detalles de su pedido
             </th>
         </tr>
+        {% if request.session.carro.items %}
         <tr>
             <th class="text-center text-uppercase">Producto</th>
             <th class="text-center text-uppercase">Cantidad</th>
@@ -12,22 +13,21 @@
         </tr>
     </thead>
     <tbody>
-        {% if request.session.carro.items %}
-            {% for key, value in request.session.carro.items %}
-                <tr class="text-center">
-                    <td>{{value.nombre}}</td>
-                    <td>{{value.cantidad}}</td>
-                    <td>
-                        <a href="{% url 'carro:agregar' value.producto_id %}" class="btn btn-sm"> + </a>
-                        <a href="{% url 'carro:restar' value.producto_id %}" class="btn btn-sm"> - </a>
-                        {{value.precio}} €
-                    </td>
-                </tr>
-            {% endfor %} 
+        {% for key, value in request.session.carro.items %}
+            <tr class="text-center">
+                <td class="articulos">{{value.nombre}}</td>
+                <td class="articulos">{{value.cantidad}}</td>
+                <td>
+                    <a href="{% url 'carro:agregar' value.producto_id %}" class="añadir btn btn-sm"> + </a>
+                    <a href="{% url 'carro:restar' value.producto_id %}" class="añadir btn btn-sm"> - </a>
+                    <p class="precio">{{value.precio}} €</p>
+                </td>
+            </tr>
+        {% endfor %} 
         {% else %}
             <tr>
                 <td colspan="3">
-                    <div class="alert alert-danger text-center">
+                    <div class="sin-productos text-center">
                         Sin productos
                     </div>
                 </td>
@@ -35,17 +35,19 @@
         {% endif %}
     </tbody>
     <tfoot>
+        {% if request.session.carro.items %}
         <tr>
             <td colspan="3">
-                <p class="text-center">Total: {{importe_total}} €</p>
+                <p class="total text-center">Total: {{importe_total}} €</p>
             </td>
         </tr>
-        {% if request.session.carro.items %}
-            <tr>
-                <td colspan="3" style="text-align: center;">
-                    <a href="../pedidos" class="btn btn-success">Comprar</a>
-                </td>
-            </tr>
+        <tr>
+            <td colspan="3" style="text-align: center;">
+                <button class="btn btn-sm nav-item" type="button">
+                    <a class="nav-link text-center" href="../pedidos"">Comprar</a>
+                </button>
+            </td>
+        </tr>
         {% endif %}
     </tfoot>
 </table>
