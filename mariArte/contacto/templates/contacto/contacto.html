@@ -7,10 +7,10 @@
     <div class="contact-container">
         <div class="form">
             {% if "valido" in request.GET %}
-            <p style="color: darkblue; text-align: center;">Se han enviado los datos. Gracias.</p>
+                <p>Se han enviado los datos. Gracias.</p>
             {% endif %}
             {% if "novalido" in request.GET %}
-            <p style="color: darkblue; text-align: center;">Error al enviar los datos. Revise los datos.</p>
+                <p>Error al enviar los datos. Revise los datos.</p>
             {% endif %}
             <form id="form" action="https://formspree.io/f/mrgnqkpo" method="POST">
             {% csrf_token %}

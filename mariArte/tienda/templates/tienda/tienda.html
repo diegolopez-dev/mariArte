@@ -2,23 +2,24 @@
 {% load static %}
 {% block content %}
 
-<div class="container">
+<section class="contact" id="contact">
+    <h2 class="contact-title">Tienda</h2>
     <div class="row">
         {% for producto in productos %}
-        <div class="col-md-3">
-            <div class="card" style="width: 100%; margin: 5px 5px;">
+        <div class="col-md-4">
+            <div class="card">
                 <img src="{{producto.imagen.url}}" class="card-img-top">
-                <div class="card-body" style="text-align: center;">
-                    <h7 class="card-title">{{producto.nombre}}</h7>
-                    <p class="card-text">{{producto.precio}}&nbsp;€</p>
-                </div>
-                <div class="card-footer text-center">
-                    <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">Agregar al carro</a>
+                <div class="card-body">
+                    <h7>{{producto.nombre}}</h7>
+                    <p>{{producto.precio}} €</p>
+                    <button class="btn btn-sm nav-item" type="button">
+                        <a class="nav-link text-center" href="{% url 'carro:agregar' producto.id %}">Agregar al carro</a>
+                    </button>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
-</div>
+</section>
 
 {% endblock %}

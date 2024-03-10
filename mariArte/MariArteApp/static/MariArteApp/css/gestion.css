@@ -106,7 +106,6 @@ body {
 .btn a:hover {
   color: var(--bg-color);
   background: var(--font-color);
-  transform: scale(1.1);
 }
 
 #btn-user {
@@ -275,7 +274,6 @@ body {
 
 #login {
   margin-top: 5rem;
-  opacity: .9;
 }
 
 .alert-login {
@@ -287,7 +285,6 @@ body {
  
 #registro {
   margin: 2rem 1rem;
-  opacity: .9;
 }
 
 .invalid-feedback {
@@ -366,7 +363,72 @@ body {
   cursor: pointer;
 }
 
+/*   ---TIENDA---   */
+
+.col-md-4 {
+  margin-top: 1rem;
+}
+
+.card {
+  width: 100%;
+  margin: 5px 5px;
+  background-color: var(--bg-color);
+  border-radius: 5%;
+}
+
+.card-img-top {
+  padding: .5rem .5rem;
+  border-radius: 10%;
+}
+
+.card-body {
+  color: var(--font-color);
+  text-align: center;
+  font-weight: var(--bold-font);
+  padding: .5rem;
+}
+
+.card-body p {
+  margin-bottom: .5rem;
+}
+
+.card-body button {
+  margin-bottom: .5rem;
+}
+
 /*   ---CARRO---   */
+
+table {
+  border: 2px solid var(--font-color);
+}
+
+.table thead th {
+  border: 2px solid var(--font-color);
+} 
+
+.table tbody tr td {
+  border: 2px solid var(--font-color);
+}
+
+.table tfoot tr td {
+  border: 2px solid var(--font-color);
+}
+
+.table .title-carro {
+  color: var(--font-color);
+  font-weight: var(--bold-font);
+  font-size: 1.5rem;
+}
+
+.mb-4 {
+  color: var(--font-color);
+  font-weight: var(--bold-font);
+}
+
+.mb-4 span {
+  color: var(--font-color-active);
+  text-decoration: underline;
+}
 
 
 /*   ---FOOTER---   */
