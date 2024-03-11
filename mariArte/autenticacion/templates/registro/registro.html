@@ -8,7 +8,7 @@
     <h2 class="registro-title">Registro</h2>
     <div class="contact-container">
         <div class="form">
-            <form method="post" action="">
+            <form id="form_registro" method="POST" action="">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <input type="submit" value="Registrate" id="submit-btn" class="submit-btn"/>

@@ -25,15 +25,4 @@ async function handleSubmit(event) {
 			icon: "success"
 		  });
 	}
-	else {
-		this.reset()
-		Swal.fire({
-			title: "¡UPSS!",
-			text: "Algo salio mal intetalo de nuevo",
-			iconColor: '#faffbe',
-			color: '#faffbe',
-			background: '##141212',
-			icon: "warning"
-		  });
-	}
 }
