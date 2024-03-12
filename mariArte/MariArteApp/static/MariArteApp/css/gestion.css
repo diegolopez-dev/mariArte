@@ -254,6 +254,7 @@ body {
 /*   ---'SERVICIOS'---   */
 .intro {
   position: relative;
+  object-fit: cover;
 }
 
 .bg-faded {
@@ -291,6 +292,7 @@ body {
 
 /*   ---TIENDA---   */
 
+
 .col-md-4 {
   margin-top: 1rem;
 }
@@ -300,12 +302,14 @@ body {
   margin: 5px 5px;
   background-color: var(--bg-color);
   border-radius: 5%;
+  object-fit: cover;
 }
 
-.card-img-top {
+.card img {
+  height: 480px;
   padding: .5rem .5rem;
   border-radius: 10%;
-}
+} 
 
 .card-body {
   color: var(--font-color);
