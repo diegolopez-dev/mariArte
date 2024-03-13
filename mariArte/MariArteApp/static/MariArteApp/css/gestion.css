@@ -38,7 +38,7 @@ a:hover {
 
 body {
   font-family: var(--font-family);
-  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("https://www.aldi.es/content/dam/aldi/spain/inspiracion/alditrucos/2022/aprende-decorar-botellas-cristal-navidad/decorar-botellas-vidrio-navidad_cover_video.jpg");
+  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/fondo.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -73,9 +73,17 @@ body {
   color: var(--font-color);
 }
 
-#btn-collapse {
-  color: var(--bg-color);
-  background-color: var(--font-color);
+#btn-collapse path {
+  color: var(--font-color);
+}
+
+#btn-collapse:hover {
+  text-decoration: none;
+  transform: scale(1.2);
+}
+
+#btn-collapse:focus {
+  outline: none;
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -271,7 +279,7 @@ body {
 }
 
 .bg-faded {
-  background-color: var(--bg-color)
+  background-color: var(--bg-color);
 }
 
 @media (min-width: 992px) {
@@ -283,7 +291,7 @@ body {
   .intro .intro-text {
     left: 520px;
     width: 50%;
-    margin-top: 5rem;
+    margin-top: 3.5rem;
     background-color: var(--bg-color);
     color: var(--font-color);
     position: absolute;
