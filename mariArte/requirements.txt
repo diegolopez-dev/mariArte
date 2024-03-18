@@ -20,7 +20,7 @@ crispy-bootstrap5==2024.2
 cycler==0.11.0
 distro==1.9.0
 dj-database-url==2.1.0
-Django==4.2.2
+Django==4.0
 django-crispy-forms==2.0
 docopt==0.6.2
 fastapi==0.96.1
