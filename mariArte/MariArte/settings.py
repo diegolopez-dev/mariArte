@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'autenticacion',
     'contacto',
     'crispy_forms',
-    'crispy_bootstrap5',
+    #'crispy_bootstrap5',
     'pedidos',
 ]
 
