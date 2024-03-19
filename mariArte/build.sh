@@ -2,7 +2,9 @@
 # Exit on error
 set -o errexit
 
-pip install -r requirements.txt
+pip install --upgrade pip
+
+pip install -r ./mariArte/requirements.txt
 
 python manage.py collectstatic --no-input
 
