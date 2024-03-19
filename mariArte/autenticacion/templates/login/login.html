@@ -8,11 +8,9 @@
     <div class="contact-container">
         <div class="form">
             {% if messages %}
-                {% for mensaje in messages %}
                 <span class="alert-login">
                     {{mensaje}}
                 </span>
-                {% endfor %}
             {% endif %}
             <form method="post" action="" id="form">
                 {% csrf_token %}
