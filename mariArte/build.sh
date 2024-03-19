@@ -6,6 +6,6 @@ pip install --upgrade pip
 
 pip install -r ./mariArte/requirements.txt
 
-python manage.py collectstatic --no-input
+python ./mariArte/manage.py collectstatic --no-input
 
-python manage.py migrate
+python ./mariArte/manage.py migrate
